@@ -34,7 +34,7 @@ public class HungryBirdController : MonoBehaviour
 		}
 	}
 
-	void0 OnCollisionEnter()
+	void OnCollisionEnter()
 	{
 		Time.timeScale = 0.00000001f;
 		failed = true;
@@ -68,7 +68,7 @@ public class HungryBirdController : MonoBehaviour
         GUI.Label(new Rect(X - 100, Y + 20, 200, 40), "Wynik: " + points);
 		int buttonWidth = 128;
 		int buttonHeight = 60;
-		int positionX = (int)(X - buttonWidth) * 0.5f);
+		int positionX = (int)(X - buttonWidth * 0.5f);
 		int positionY = (int)(Y - buttonHeight * 0.5f);
 		Rect buttonRect = new Rect(positionX, positionY, buttonWidth, buttonHeight);
 		if (GUI.Button(buttonRect, "Try again!"))
@@ -92,6 +92,7 @@ public class HungryBirdController : MonoBehaviour
 		if (GUI.Button(buttonRect, "Try again!"))
 		{
 			Application.LoadLevel(sceneName);
+			points=0;
 		}
 	}
 
