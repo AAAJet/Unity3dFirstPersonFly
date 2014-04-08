@@ -25,7 +25,7 @@ public class MENU : MonoBehaviour {
 		int X = (int)(Screen.width*0.5);
 		int Y = (int)(Screen.height*0.5);
 		int positionX = (int)(X - buttonWidth * 0.5f);
-		int positionY = (int)(Y + buttonHeight * 0.5f);
+		int positionY = (int)(Y - buttonHeight * 0.5f);
 		Rect buttonRect = new Rect(positionX, positionY, buttonWidth, buttonHeight);
 		if (GUI.Button(buttonRect, "NEW GAME"))
 		{
@@ -39,11 +39,12 @@ public class MENU : MonoBehaviour {
 		int X = (int)(Screen.width*0.5);
 		int Y = (int)(Screen.height*0.5);
 		int positionX = (int)(X - buttonWidth * 0.5f);
-		int positionY = (int)(Y - buttonHeight * 0.5f);
+		int positionY = (int)(Y + buttonHeight * 0.5f);
 		Rect buttonRect = new Rect(positionX, positionY, buttonWidth, buttonHeight);
 		if (GUI.Button(buttonRect, "END GAME"))
 		{
 			Application.Quit();
 		}	
+
 	}
 }
