@@ -8,7 +8,7 @@ public class HungryBirdController : MonoBehaviour
 
 	public string sceneName;
 	public float convectionForceAmount = 9.0f;
-
+	public GUISkin playerGUISkin;
 	private Rect imageRectangle;
 
 
@@ -47,6 +47,7 @@ public class HungryBirdController : MonoBehaviour
 	/// </summary>
 	void OnGUI()
 	{
+		GUI.skin = playerGUISkin;
 		Rect textRectangle = new Rect(20, 20, 100, 40);
 		GUI.Label(textRectangle, "Score: " + points);
 
